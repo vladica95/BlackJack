@@ -11,6 +11,7 @@ namespace BlackJack
         private List<Card> cards;
         private String[] colArray = { "pik", "tref", "karo", "herc" };
         private String[] valArray = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
+        private static readonly Random rand = new Random();
 
         public Deck()
         {
@@ -26,7 +27,8 @@ namespace BlackJack
         }
         private int Luck()
         {
-            return ((DateTime.Now.Millisecond * DateTime.Now.Minute * DateTime.Now.Year) % cards.Count);
+
+            return (rand.Next(0,7923) % cards.Count);
         }
 
         public Card GetCard()

@@ -254,7 +254,7 @@ namespace BlackJack
             LoadScores(@"E:\HighScore.txt");
             Save(@"E:\HighScore.txt");
             PrintHighScore();
-            PlayTheGame();
+            
         }
     }
 }

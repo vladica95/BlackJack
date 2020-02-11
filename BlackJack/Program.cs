@@ -12,7 +12,16 @@ namespace BlackJack
         static void Main(string[] args)
         {
             Game game = new Game();
-            game.PlayTheGame();
+            bool GameIsOn = true;
+            while (GameIsOn)
+            {
+                game.PlayTheGame();
+                Console.WriteLine("Play again? y/n");
+                if (Console.ReadLine() == "n")
+                {
+                    GameIsOn = false;
+                }
+            }
         }
     }
 }
